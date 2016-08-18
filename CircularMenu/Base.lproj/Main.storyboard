@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jdS-2H-TrK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <collectionViewLayout key="collectionViewLayout" id="ZUE-jR-ARu" customClass="CircularCollectionViewLayout" customModule="CircularMenu" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DAG-92-k5L" customClass="CircularCollectionViewCell" customModule="CircularMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="184"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="184"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-lm-u0X">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="184"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="KjL-lm-u0X" secondAttribute="bottom" id="0b3-eF-BuW"/>
+                                            <constraint firstAttribute="trailing" secondItem="KjL-lm-u0X" secondAttribute="trailing" id="EpC-KW-yqd"/>
+                                            <constraint firstItem="KjL-lm-u0X" firstAttribute="leading" secondItem="DAG-92-k5L" secondAttribute="leading" id="Xqw-ls-Zo8"/>
+                                            <constraint firstItem="KjL-lm-u0X" firstAttribute="top" secondItem="DAG-92-k5L" secondAttribute="top" id="YOb-TG-Uvj"/>
+                                        </constraints>
+                                        <size key="customSize" width="177" height="184"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="KjL-lm-u0X" id="zy1-zx-RWX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mCg-Jk-eG5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="x74-vU-i5e"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jdS-2H-TrK" secondAttribute="trailing" id="SXD-ld-81A"/>
+                            <constraint firstItem="jdS-2H-TrK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wr8-AC-Epx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jdS-2H-TrK" secondAttribute="bottom" id="ly8-2g-f9b"/>
+                            <constraint firstItem="jdS-2H-TrK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tRU-Ne-1BA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="jdS-2H-TrK" id="XfU-W6-dmL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
